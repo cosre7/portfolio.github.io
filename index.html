@@ -33,7 +33,7 @@
     </head>
     <body>
         <!-- 1. 내비게이션 바 (메뉴) -->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-black fixed-top">
             <div class="container">
                 <a class="navbar-brand" href="#home">포트폴리오</a>
                 <button
@@ -71,36 +71,44 @@
 
         <!-- 2. Home 섹션 (메인 화면) -->
         <section id="home" class="d-flex align-items-center text-center">
-            <div class="container" data-aos="zoom-in">
-                <h1 class="display-3">
-                    안녕하세요, <strong>박유진</strong>입니다.
-                </h1>
-                <a href="#projects" class="btn btn-primary btn-lg mt-3"
-                    >내 작업 보기</a
+            <div id="particles-js"></div>
+            <div class="container">
+                <h1 class="display-3">안녕하세요</h1>
+                <p class="lead">저는 <span id="typed-text"></span>입니다.</p>
+                <a href="#projects" class="btn btn-outline-light btn-lg mt-3"
+                    >프로젝트 보기</a
                 >
             </div>
         </section>
 
         <!-- 3. About Me 섹션 (자기소개) -->
         <section id="about" class="py-5">
-            <div class="container" data-aos="fade-up">
+            <div class="container my-5" data-aos="fade-up">
                 <h2 class="text-center mb-5">About Me</h2>
                 <div class="row align-items-center">
                     <div class="col-md-4 text-center">
                         <!-- 본인 사진을 'profile.jpg'로 저장하여 폴더에 넣거나, 이미지 URL을 넣으세요. -->
                         <img
-                            src="https://via.placeholder.com/300"
+                            src="images/profile.jpg"
                             alt="프로필 사진"
                             class="img-fluid rounded-circle mb-4"
                         />
                     </div>
-                    <div class="col-md-8">
-                        <h3>상상을 현실로 만드는 개발자</h3>
+                    <div class="col-md-8 px-5">
+                        <h3>디지털노마드를 꿈꾸는 개발자</h3>
+                        <p>🙋‍♀️ 저에 대해 간단히 소개하면</p>
                         <p>
-                            <!-- 이 곳에 자기소개를 작성하세요. -->
-                            자기소개자기소개
+                            MBTI: ENTP (아이디어 많고, 새로운 걸 좋아합니다)
+                            <br />
+                            직업: 기획자 + 개발자 + 마케터
+                            <br />
+                            목표: 장소에 얽매이지 않고 자유롭게 일하며, 스스로의
+                            시간과 방향을 설계할 수 있는 삶
                         </p>
-                        <p>자기소개2</p>
+                        <p>
+                            좋아하는 일을 하며 살아가기 위해 기술로 자유를
+                            만들어가는 중입니다
+                        </p>
                     </div>
                 </div>
             </div>
@@ -169,79 +177,68 @@
                 <h2 class="text-center mb-5">Projects</h2>
                 <div class="row">
                     <!-- 프로젝트 1 -->
-                    <div class="col-md-4 mb-4">
-                        <div class="card h-100">
-                            <!-- 프로젝트 이미지를 'project1.jpg' 등으로 저장하거나 URL을 넣으세요. -->
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="card h-100 p-2">
                             <img
-                                src="https://via.placeholder.com/400x300"
+                                src="images/watermelon.jpg"
                                 class="card-img-top"
                                 alt="프로젝트 1"
                             />
                             <div class="card-body">
-                                <h5 class="card-title">프로젝트 제목 1</h5>
+                                <h5 class="card-title">수박게임</h5>
                                 <p class="card-text">
-                                    이 프로젝트에 대한 간단한 설명입니다. 어떤
-                                    기술을 사용했고, 어떤 기능을 구현했는지
-                                    작성하세요.
+                                    JavaScript 물리엔진과 이벤트을 활용한
+                                    수박게임
                                 </p>
-                                <a href="#" class="btn btn-primary"
-                                    >자세히 보기</a
-                                >
-                                <a href="#" class="btn btn-outline-secondary"
-                                    ><i class="fab fa-github"></i> GitHub</a
+                                <div class="project-tech">
+                                    <span class="badge bg-primary"
+                                        >JavaScript</span
+                                    >
+                                    <span class="badge bg-secondary"
+                                        >matter.js</span
+                                    >
+                                </div>
+                                <a
+                                    href="https://cosre7.github.io/watermelon/"
+                                    class="btn btn-outline-primary"
+                                    target="_blank"
+                                    >LIVE DEMO</a
                                 >
                             </div>
                         </div>
                     </div>
                     <!-- 프로젝트 2 -->
-                    <div class="col-md-4 mb-4">
-                        <div class="card h-100">
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="card h-100 p-2">
                             <img
-                                src="https://via.placeholder.com/400x300"
+                                src="images/timer.jpg"
                                 class="card-img-top"
                                 alt="프로젝트 2"
                             />
                             <div class="card-body">
-                                <h5 class="card-title">프로젝트 제목 2</h5>
+                                <h5 class="card-title">
+                                    메이크업 실기시험 타이머
+                                </h5>
                                 <p class="card-text">
-                                    두 번째 프로젝트에 대한 설명입니다. 반응형
-                                    디자인과 인터랙티브한 기능을 강조한
-                                    프로젝트입니다.
+                                    메이크업 실기시험 대비용 타이머로 각 과제별
+                                    랜덤 시험 출제 기능과 AI로 만든 음성 안내가
+                                    포함되어 있습니다
                                 </p>
-                                <a href="#" class="btn btn-primary"
-                                    >자세히 보기</a
-                                >
-                                <a href="#" class="btn btn-outline-secondary"
-                                    ><i class="fab fa-github"></i> GitHub</a
+                                <div class="project-tech">
+                                    <span class="badge bg-primary"
+                                        >JavaScript</span
+                                    >
+                                    <span class="badge bg-secondary">AI</span>
+                                </div>
+                                <a
+                                    href="https://cosre7.github.io/timer/"
+                                    class="btn btn-outline-primary"
+                                    target="_blank"
+                                    >LIVE DEMO</a
                                 >
                             </div>
                         </div>
                     </div>
-                    <!-- 프로젝트 3 -->
-                    <div class="col-md-4 mb-4">
-                        <div class="card h-100">
-                            <img
-                                src="https://via.placeholder.com/400x300"
-                                class="card-img-top"
-                                alt="프로젝트 3"
-                            />
-                            <div class="card-body">
-                                <h5 class="card-title">프로젝트 제목 3</h5>
-                                <p class="card-text">
-                                    세 번째 프로젝트에 대한 설명입니다. 백엔드
-                                    API와 연동하여 만든 풀스택
-                                    애플리케이션입니다.
-                                </p>
-                                <a href="#" class="btn btn-primary"
-                                    >자세히 보기</a
-                                >
-                                <a href="#" class="btn btn-outline-secondary"
-                                    ><i class="fab fa-github"></i> GitHub</a
-                                >
-                            </div>
-                        </div>
-                    </div>
-                    <!-- 프로젝트를 더 추가하려면 위 'col-md-4' 블록을 복사해서 붙여넣으세요 -->
                 </div>
             </div>
         </section>
@@ -278,16 +275,25 @@
         </section>
 
         <!-- 7. Footer (하단 정보) -->
-        <footer class="py-4 bg-dark text-white text-center">
+        <footer class="py-4 bg-black text-white text-center">
             <div class="container">
                 <p class="m-0">
-                    Copyright © 2024. 홍길동. All rights reserved.
+                    Copyright © 2025. 박유진. All rights reserved.
                 </p>
             </div>
         </footer>
 
+        <!-- 1. jQuery (Particles.js 일부 기능에 필요) -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+        <!-- 2. particles.js 라이브러리 -->
+        <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
         <!-- Bootstrap JS Bundle -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+        <!-- Typed.js 라이브러리 -->
+        <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 
         <!-- AOS 라이브러리 JS -->
         <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
